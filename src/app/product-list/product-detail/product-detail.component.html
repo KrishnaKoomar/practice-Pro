@@ -1,0 +1,33 @@
+<form [formGroup]="ProductDetailForm" (ngSubmit)="submit()">
+<div class="card">
+    <div class="card-header ">
+        ProductDetailForm
+    </div>
+<div class="row">
+<div class="col-xs-12 col-sm-3">
+   <strong><label>Ram</label></strong> 
+    <input type="text" class="form-control" formControlName="Ram">
+    <!-- <div *ngIf="ProductDetailForm.get('Ram')?.invalid">
+        <p>Ram is Required!!</p>
+    </div> -->
+</div>
+
+<div class="col-xs-12 col-sm-3">
+    <strong><label>Internal Memory</label></strong> 
+     <input type="text" class="form-control" formControlName="InternalMemory">
+ </div>
+
+ <div class="col-xs-12 col-sm-3">
+    <strong><label>Display</label></strong> 
+     <input type="text" class="form-control" formControlName="Display">
+ </div>
+ <div class="col-xs-12 col-sm-4">
+
+     <button class="btn btn-primary" type="submit">submit</button>
+      
+     
+     <button class="btn btn-danger" type="reset">Reset</button>
+ </div>
+</div>
+</div>
+</form>

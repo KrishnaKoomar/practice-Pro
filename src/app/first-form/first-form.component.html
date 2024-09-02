@@ -1,0 +1,33 @@
+<div class="justify-content-center">
+    <form [formGroup]="myform" (ngSubmit)="register()">
+        <div>
+        First name<input type="text" formControlName="Fname">
+        <div *ngIf="myform.controls['Fname'].touched && !myform.controls['Fname'].valid">
+            <span *ngIf="myform.controls['Fname'].hasError('required')">
+                First name is required!!
+            </span>
+            <span *ngIf="myform.controls['Fname'].hasError('minlength')">
+             First Name Should be 5 character
+            </span>
+            <span *ngIf="myform.controls['Fname'].hasError('maxlength')">
+                First Name Should be 8 character
+            </span>
+        </div>
+    </div>
+    <div>
+        Last name<input type="text" formControlName="Lname" class="form-control">
+    </div>
+    <div>
+        ID<input type="text" formControlName="Id">
+    </div>
+    <div>
+        Rollno<input type="text" formControlName="Rollno">
+    </div>
+
+        <div>
+            <button type="submit">register</button>
+            <button type="reset">cancel</button>
+            <button (click)="reset()">cancel2</button>
+        </div>
+    </form>
+</div>

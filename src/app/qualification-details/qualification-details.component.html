@@ -1,0 +1,176 @@
+<!-- <div class="card">
+  <div class="card-header bg-primary text-light fw-bold fs-5">
+    Qualification Deatils
+  </div>
+
+  <form [formGroup]="Qualificationform" (ngSubmit)="Save()">
+    <div class="row">
+      <div class="col-3 fw-bold fs-4 mt-2 ms-5">
+        <label>Qualification Type<sup class="text-danger">*</sup></label>
+
+        <select class="form-control" formControlName="QualificationType">
+          <option value="1">Select Type</option>
+          <option value="X">X</option>
+          <option value="XII">XII</option>
+          <option value="Other Type">Other Type</option>
+          <option value="Post Graduation">Post Graduation</option>
+          <option value="Graduation">Graduation</option>
+        </select>
+
+        <div
+          class="fs-5 text-danger"
+          *ngIf="Qualificationform.get('QualificationType')?.value == '1'"
+        >
+          <small>plz select Any Qualification!!</small>
+        </div>
+
+        <label class="mt-4">University/Board Name</label>
+        <input class="form-control" formControlName="UniversityBoardName" />
+
+        <label class="mt-4">From Data</label>
+        <input
+          type="date"
+          class="form-control fs-5"
+          formControlName="FromDate"
+        />
+      </div>
+      <div class="col-3 fw-bold fs-4 mt-2 ms-5">
+        <label>Qualification </label>
+
+        <select class="form-control" formControlName="Qualification">
+          <option>Select Qualification</option>
+        </select>
+
+        <label class="mt-4"
+          >Institute/School Name<sup class="text-danger">*</sup></label
+        >
+        <input class="form-control" formControlName="InstituteSchoolName" />
+        <div
+          class="fs-5 text-danger"
+          *ngIf="
+            Qualificationform.controls['InstituteSchoolName'].touched &&
+            !Qualificationform.controls['InstituteSchoolName'].valid
+          "
+        >
+          <small>Mandatory Institute/SchoolName!!</small>
+        </div>
+
+        <label class="mt-4">To Data</label>
+        <input type="date" class="form-control fs-5" formControlName="ToDate" />
+      </div>
+
+      <div class="col-3 fw-bold fs-4 mt-2 ms-5">
+        <label>Stream</label>
+
+        <select class="form-control" formControlName="Stream">
+          <option>Select Stream</option>
+        </select>
+
+        <label class="mt-4" >Percentage<sup class="text-danger">*</sup> </label>
+        <input
+          class="form-control"
+          type="number"
+          formControlName="Percentage"
+        />
+        <div
+          class="fs-5 text-danger"
+          *ngIf="
+            Qualificationform.get('Percentage')?.invalid &&
+            (Qualificationform.get('Percentage')?.touched ||
+              Qualificationform.get('Percentage')?.dirty)
+          "
+        >
+          <div
+            *ngIf="Qualificationform.controls['Percentage'].errors?.['required']"
+          >
+            <small>Plz fill up Percentage!!</small>
+          </div>
+        </div>
+
+        <div
+          class="text-danger"
+          *ngIf="
+            Qualificationform.get('Percentage')?.value < 50 &&
+            Qualificationform.controls['Percentage'].valid
+          "
+        > 
+        <small><small>Not Eligible Minimum 50% required</small></small>
+        
+      </div>
+
+        <div
+          class="text-danger"
+          *ngIf="
+            Qualificationform.get('Percentage')?.value > 100 &&
+            Qualificationform.controls['Percentage'].valid
+          "
+        >
+          <small>Maximum perctange should be 100%</small>
+        </div>
+
+        <label class="mt-4">Data of Passing</label>
+        <input
+          type="date"
+          class="form-control fs-5"
+          formControlName="DateOfPassing"
+        />
+      </div>
+    </div>
+      
+    <div>
+      <label Class="mt-3 ms-5 fs-4 fw-bold" >Upload Document</label>
+    </div>
+    <div Class="mt-3 ms-5 col-2">
+      <input type="file" class="form-control"/>
+    
+    </div>
+
+    <div class="mt-4 ms-5">
+      <button type="submit" class="btn btn-primary">save</button>
+
+      <button class="btn btn-danger ms-3">Back</button>
+    </div>
+  </form>
+</div>
+ --------------------------table------------------------------------ 
+<hr>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">NO.</th>
+      <th scope="col">Qualification Type</th>
+      <th scope="col">Institute/School Name</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users">
+      <th scope="row">1</th>
+      <td>{{user.QualificationType}}</td>
+      <td>{{user.InstituteSchoolName}}</td>
+      <td><button class="btn btn-primary">Edit</button></td>
+      <td>
+        <button class="btn btn-danger">Update</button></td>
+    </tr>
+  <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td><button class="btn btn-primary">Edit</button>&nbsp;</td>
+      <td>
+        <button class="btn btn-danger">Update</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td >Larry the Bird</td>
+      <td>werw</td>
+      <td><button class="btn btn-primary">Edit</button>&nbsp;</td>
+      <td>
+        <button class="btn btn-danger">Update</button></td>
+    </tr> 
+  </tbody>
+</table> -->
+<button (click)="show()">show</button>

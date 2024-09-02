@@ -1,0 +1,137 @@
+<div class="card">
+    <div class="card-header bg-primary text-light fs-5 fw-bold">
+     Nominee  Deatils
+    </div>
+    <form [formGroup]="NomineeDetails">
+     <div class="row">  <!--====Head=== -->
+        <div class="col-12 bg-light d-flex justify-content-end gap-4">
+            <button class="btn btn-primary">Add</button>
+            <button class="btn btn-danger">Save</button>
+        </div>
+    </div>
+               <!-- First-Row-End------ -->
+           <div class="row">
+               
+                <div class="col-2" >
+                    <label class="fs-4"> Type</label>
+                </div>
+
+                <div class="col-2">
+                    <label class="fs-4"> Relation</label>
+                </div>
+
+                <div class="col-2">
+                    <label class="fs-4"> Name</label>
+                </div>
+
+                <div class="col-2">
+                    <label class="fs-4"> Percentage</label>
+                </div>
+
+                <div class="col-2">
+                    <label class="fs-4">Address</label>
+                </div>
+
+                <div class="col-1">
+                    <label class="fs-4"> Action</label>
+                </div>
+<!-- ------------------------------------input Box---------------------------- -->
+                <div class="col-2">
+                    <select class="form-select  " formControlName="selectbox1">
+                        <option value="1">Select</option>
+                        <option value="2">PF</option>
+                        <option value="2">B</option>
+                    </select>
+                </div>
+
+                <div class="col-2">
+                    <select class="form-select" formControlName="selectbox2">
+                        <option value="11">Select</option>
+                        <option value="11">Father</option>
+                        <option value="11">Mother</option>
+                    </select>
+                </div>
+
+                <div class="col-2">
+                    <input type="text" class="form-control" formControlName="Textbox3">
+                    <div *ngIf="NomineeDetails.controls['Textbox3']?.hasError('required')"> <small class="text-danger"> Name is required</small></div>
+                        <div *ngIf="NomineeDetails.controls['Textbox3']?.hasError('minlength')">
+                            <small class="text-danger"> Minimum 8 character</small>
+                    </div>
+
+                    <div *ngIf="NomineeDetails.controls['Textbox3']?.hasError('maxlength')">
+                        <small class="text-danger"> Maximum 8 character</small>
+                </div>
+                    
+                </div>
+
+                <div class="col-2">
+                    <input type="text" class="form-control" formControlName="Textbox4" >
+                    
+                </div>
+
+                <div class="col-2">
+                    <textarea class="form-control" formControlName="Address" ></textarea>
+                </div>
+
+                <div class="col-1">
+                    <button class="btn btn-danger" formControlName="Delet" (click)="OnClick()">Delet</button>
+                </div>
+
+
+         </div>
+   </form>             
+</div>
+                
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-2 ">
+      <label class="fs-4 ">Type</label>
+      <select class="form-select" formControlName="selectbox1">
+          <option value="1">Select</option>
+          <option value="2">PF</option>
+          <option value="2">B</option>
+      </select>
+    </div>
+
+    <div class="col-2 ">
+      <label class="fs-4 ">Relation</label>
+      <select class="form-select" formControlName="selectbox2">
+          <option value="11">Select</option>
+          <option value="11">Father</option>
+          <option value="11">Mother</option>
+      </select>
+    </div> 
+
+    <div class="col-2 ">
+      <label class="fs-4 ">Name</label>
+      <input type="text" class="form-control" formControlName="Textbox3">
+    </div>
+</div>     
+</div> -->

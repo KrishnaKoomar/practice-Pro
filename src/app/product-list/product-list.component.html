@@ -1,0 +1,6 @@
+<p>product-list works!</p>
+<div *ngFor="let pro of products">
+    <a [routerLink]="['/Product',pro.id]">{{pro.name }}</a>
+</div>
+
+

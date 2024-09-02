@@ -1,0 +1,26 @@
+<!-- dynamic-form.component.html -->
+<form [formGroup]="dynamicForm" (ngSubmit)="submit()">
+  <div class="card">
+    <div class="col">
+        <div class="col-xs-12 col-sm-4">
+           <b><label for="name">Name</label></b>
+            <input id="name" formControlName="name" type="text" class="form-control">
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <b><label for="name">Email</label></b>
+             <input id="name" formControlName="name" type="email" class="form-control">
+         </div>
+            
+         <div class="col-xs-12 col-sm-4">
+            <div formArrayName="addresses">
+                <div *ngFor="let address of addresses.controls let i = index" [formGroupName]="i"></div>
+                   
+            </div>
+         </div>
+
+    </div>
+
+  </div>
+</form>
+

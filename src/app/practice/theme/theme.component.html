@@ -1,0 +1,15 @@
+<!-- theme-switcher.component.html
+<button (click)="changeTheme('red')">Light Theme</button>
+<button (click)="changeTheme('green')">Dark Theme</button>
+<button (click)="ClearTheme()">clear Theme</button>
+<button (click)="RemoveTheme()">Remove Theme</button> -->
+<!-- <app-practice [receviedData]="ParentData"></app-practice> -->
+
+
+<!-- <p>Receibbckje{{receviedData}}</p> -->
+  <div *ngFor="let rec of receviedData">
+    <p *ngIf="rec">Received Data: {{ rec.name}}  {{rec.category}} {{rec.price}}  </p>
+  </div>
+
+  <button (click)="sanddata()">sandData</button>
+  <p>Theme component</p>

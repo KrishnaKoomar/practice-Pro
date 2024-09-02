@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-3">
+        <div>
+        <form [formGroup]="IdentityDocs">
+            <label>document type</label>
+            <select class="form-select" formControlName="DocumentType" >
+               
+                    <option value="0">select</option>
+                    <option value="1">adhaar</option>
+                    <option value="2">pan</option>
+                    <option value="3">visa</option>
+                    <option value="4">dl</option>
+                  </select>
+           </form>
+        </div>
+        <div [ngStyle]="{'display' : isVisible ? 'block':'none'}">
+
+            <label>upload</label>
+            <input type="file" class="form-control">
+        </div>
+    </div>
+
+</div>
